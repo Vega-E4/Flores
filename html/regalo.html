@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Regalo para Ti - Flores Amarillas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="confetti-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></canvas>
+
+    <nav class="navegacion">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="significado.html">Significado</a></li>
+            <li><a href="regalo.html" class="active">Un Regalo</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor">
+        <div class="carta">
+            <div class="sticker-container">
+                <!-- === CAMBIO AQUÍ: Se reemplaza el video por un botón (enlace) === -->
+                <a href="floreshtml/dist/index.html" class="btn-regalo" id="sticker-interactivo">
+                    ✨ ¡Abrir mi Regalo! ✨
+                </a>
+            </div>
+            <div class="contenido">
+                <h2>Un pequeño detalle para ti</h2>
+                <p>Porque te mereces algo especial. ¡Haz clic en el botón!</p>
+                <p id="mensaje-secreto" class="oculto">
+                    Este es un ramo virtual de alegría, optimismo y buenos deseos. <br>
+                    <strong>¡Que tu día esté lleno de luz y felicidad!</strong>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Librería para el efecto de confeti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

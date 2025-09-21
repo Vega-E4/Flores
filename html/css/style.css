@@ -1,0 +1,234 @@
+/* --- ESTILOS GENERALES --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFDE7; /* Un amarillo pálido de fondo */
+    color: #424242;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- NAVEGACIÓN --- */
+.navegacion {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.navegacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.navegacion li a {
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #757575;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navegacion li a.active,
+.navegacion li a:hover {
+    color: #333;
+    background-color: #FFEB3B; /* Amarillo vibrante */
+    border-radius: 50px;
+}
+
+/* --- CONTENEDOR PRINCIPAL Y CARTA --- */
+.contenedor {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.carta {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- STICKER INTERACTIVO (VIDEO) --- */
+.sticker-container {
+    margin-bottom: 20px;
+}
+
+.sticker {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: float 3s ease-in-out infinite;
+
+    /* Estilos clave para que el video se vea como un sticker circular */
+    border-radius: 50%;
+    object-fit: cover; /* Asegura que el video llene el círculo */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    border: 4px solid #fff;
+}
+
+.sticker:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.sticker.clicked {
+    animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+
+/* --- CONTENIDO DE LA CARTA --- */
+.contenido h1, .contenido h2 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    margin-top: 0;
+}
+
+.contenido p, .contenido li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #616161;
+}
+
+/* --- MENSAJE OCULTO --- */
+.oculto {
+    display: none;
+}
+
+#mensaje-secreto {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FFF9C4; /* Amarillo muy claro */
+    border-radius: 10px;
+    border-left: 5px solid #FBC02D; /* Borde amarillo más oscuro */
+    animation: slideIn 0.5s ease-out;
+    text-align: left;
+}
+
+#mensaje-secreto ul {
+    list-style: none;
+    padding: 0;
+}
+
+#mensaje-secreto ul li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#mensaje-secreto ul li::before {
+    content: '🌼'; /* Emoji de flor como viñeta */
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ... (Todo tu código CSS anterior va aquí) ... */
+
+/* --- MENSAJE OCULTO --- */
+.oculto {
+    display: none;
+}
+
+#mensaje-secreto {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FFF9C4; /* Amarillo muy claro */
+    border-radius: 10px;
+    border-left: 5px solid #FBC02D; /* Borde amarillo más oscuro */
+    animation: slideIn 0.5s ease-out;
+    text-align: left;
+}
+
+#mensaje-secreto ul {
+    list-style: none;
+    padding: 0;
+}
+
+#mensaje-secreto ul li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#mensaje-secreto ul li::before {
+    content: '🌼'; /* Emoji de flor como viñeta */
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* === ESTILOS NUEVOS AÑADIDOS AL FINAL === */
+
+/* Estilo para el botón de regalo */
+.btn-regalo {
+    display: inline-block;
+    background-color: #FFEB3B; /* Amarillo principal */
+    color: #333;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el ratón por encima */
+.btn-regalo:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* La animación 'pop' al hacer clic también se aplica al botón */
+.btn-regalo.clicked {
+    animation: pop 0.4s ease;
+}
