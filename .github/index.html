@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día de las Flores Amarillas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navegacion">
+        <!-- ... (El menú de navegación no cambia) ... -->
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="significado.html">Significado</a></li>
+            <li><a href="regalo.html">Un Regalo</a></li>
+        </ul>
+    </nav>
+    <main class="contenedor">
+        <div class="carta">
+            <div class="sticker-container">
+                <!-- CAMBIO: De <img> a <video> -->
+                <video autoplay loop muted playsinline class="sticker" id="sticker-interactivo">
+                    <source src="videos/flor-loop.mp4" type="video/mp4">
+                    Tu navegador no soporta el tag de video.
+                </video>
+            </div>
+            <div class="contenido">
+                <h1>¡Feliz Día de las Flores Amarillas!</h1>
+                <p>A veces, un simple gesto puede iluminar el día de alguien.</p>
+                <p id="mensaje-secreto" class="oculto">
+                    <strong>¡Toca la flor para descubrir un mensaje!</strong><br>
+                    Las flores amarillas simbolizan la alegría, la amistad y los nuevos comienzos. ¡Espero que hoy tengas un día brillante!
+                </p>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
